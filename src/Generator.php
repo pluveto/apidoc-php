@@ -37,13 +37,15 @@ class Generator
             $arglist['in'] = ".";
         }
 
+        $apidoc = [];
         foreach (rglob($arglist['in'] . '/*.php') as $file) {
             $blockDocList = \ApiDoc\Language\Classic::GetBlockDoc(realpath($file));
             foreach ($blockDocList as $block) {
                 $api = self::processBlock($block);
-                var_dump($api);
+                $apidoc["api"][] = $api;
             }
         }
+        file_put_contents("apidoc.json", json_encode($apidoc, JSON_PRETTY_PRINT));
     }
     public static function processBlock($linesBlock)
     {
