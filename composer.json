@@ -1,0 +1,24 @@
+{
+    "name": "pluveto/apidoc-gen",
+    "description": "PHP version. Generate apidoc result following the apidoc-spec.",
+    "keywords": ["apidoc", "api", "document", "generator", "restful"],
+    "homepage": "https://www.pluvet.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pluveto",
+            "homepage": "http://www.pluvet.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApiDoc\\": "src/"
+        }
+    },
+    "scripts":{
+        "apidoc": "ApiDoc\\Generator::Run"
+    }
+}
