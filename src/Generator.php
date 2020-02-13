@@ -42,6 +42,9 @@ class Generator
             $blockDocList = \ApiDoc\Language\Classic::GetBlockDoc(realpath($file));
             foreach ($blockDocList as $block) {
                 $api = self::processBlock($block);
+                if(empty( $api)){
+                    continue;
+                }
                 $apidoc["api"][] = $api;
             }
         }

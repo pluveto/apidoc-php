@@ -1,5 +1,5 @@
 {
-    "name": "pluveto/apidoc-gen",
+    "name": "pluveto/apidoc-php",
     "description": "PHP version. Generate apidoc result following the apidoc-spec.",
     "keywords": ["apidoc", "api", "document", "generator", "restful"],
     "homepage": "https://www.pluvet.com",
